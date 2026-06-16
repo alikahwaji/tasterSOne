@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Coding & NMIT BIT Presentation</title>
+  <!-- Google Fonts for premium look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* DESIGN SYSTEM & COLORS */
+    :root {
+      --bg-dark: #0b0f19;
+      --card-bg: rgba(15, 23, 42, 0.65);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      
+      /* Glowing Gradients */
+      --primary: #3b82f6; /* NMIT Blue */
+      --secondary: #10b981; /* NMIT Green */
+      --accent-magenta: #ec4899; /* Creative Magenta */
+      --accent-cyan: #06b6d4; /* Tech Cyan */
+      
+      --gradient-nmit: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      --gradient-tech: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-magenta) 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* BACKGROUND BLOBS (Premium visual wow factor) */
+    .bg-blobs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      animation: float 20s infinite alternate ease-in-out;
+    }
+
+    .blob-1 {
+      top: -10%;
+      left: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: var(--primary);
+    }
+
+    .blob-2 {
+      bottom: -20%;
+      right: -10%;
+      width: 60vw;
+      height: 60vw;
+      background: var(--secondary);
+      animation-delay: -5s;
+    }
+
+    .blob-3 {
+      top: 40%;
+      left: 60%;
+      width: 35vw;
+      height: 35vw;
+      background: var(--accent-magenta);
+      animation-delay: -10s;
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(5%, 5%) scale(1.1); }
+    }
+
+    /* HEADER & BADGE */
+    header {
+      z-index: 10;
+      padding: 2.5rem 4rem 1rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .nmit-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.5rem 1.25rem;
+      border-radius: 50px;
+      border: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .nmit-badge span {
+      background: var(--gradient-nmit);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .session-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* SLIDES WRAPPER */
+    .slides-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+      padding: 1rem 4rem;
+      position: relative;
+    }
+
+    /* SLIDE LAYOUT */
+    .slide {
+      position: absolute;
+      width: 100%;
+      max-width: 1100px;
+      height: 100%;
+      max-height: 580px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px) scale(0.98);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    /* GLASSMORPHISM CARD DESIGN */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 3rem;
+      height: 100%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      display: grid;
+      grid-template-columns: 1fr;
+      align-content: center;
+      gap: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* CARD GRID LAYOUTS */
+    .split-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      letter-spacing: -1px;
+    }
+
+    .gradient-text {
+      background: var(--gradient-tech);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .nmit-text {
+      background: var(--gradient-nmit);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    /* BULLET POINTS & LISTS */
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    li {
+      font-size: 1.1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--text-main);
+    }
+
+    li::before {
+      content: "✦";
+      color: var(--accent-cyan);
+      font-weight: bold;
+    }
+
+    li.nmit-bullet::before {
+      color: var(--secondary);
+    }
+
+    /* CODE BLOCKS */
+    code, pre {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
+    }
+
+    pre {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      overflow-x: auto;
+      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .keyword { color: #f43f5e; }
+    .fn { color: #38bdf8; }
+    .number { color: #f59e0b; }
+    .comment { color: #64748b; font-style: italic; }
+    .string { color: #10b981; }
+
+    /* HIGHLIGHT BOXES / CARDS */
+    .info-box {
+      background: rgba(59, 130, 246, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1.25rem;
+      border-radius: 0 12px 12px 0;
+      margin-top: 1rem;
+    }
+
+    .info-box h4 {
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      margin-bottom: 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .info-box p {
+      font-size: 0.95rem;
+    }
+
+    /* DIAGRAMS */
+    .coordinate-diagram {
+      background: #090d16;
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      aspect-ratio: 4/3;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-label {
+      position: absolute;
+      font-size: 0.8rem;
+      font-family: 'Fira Code', monospace;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER & CONTROLS */
+    footer {
+      z-index: 10;
+      padding: 1rem 4rem 2.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .progress-track {
+      background: rgba(255, 255, 255, 0.05);
+      height: 4px;
+      width: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--gradient-nmit);
+      transition: width 0.3s ease;
+    }
+
+    .slide-counter {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-family: 'Fira Code', monospace;
+    }
+
+    .controls {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    /* CUSTOM CONTENT ELEMENTS */
+    .hero-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--gradient-nmit);
+      color: white;
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(16, 185, 129, 0.5);
+    }
+
+    .keyboard-hint {
+      position: absolute;
+      bottom: 1rem;
+      right: 1.5rem;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.2);
+      font-family: 'Fira Code', monospace;
+    }
+
+    .big-stat {
+      font-size: 4rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      line-height: 1;
+      background: var(--gradient-tech);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .highlight-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .highlight-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND GRADIENTS -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- TOP HEADER -->
+  <header>
+    <div class="nmit-badge">
+      <span>NMIT</span> | Bachelor of IT
+    </div>
+    <div class="session-title">
+      Taster Session One
+    </div>
+  </header>
+
+  <!-- MAIN SLIDES CONTAINER -->
+  <div class="slides-container">
+
+    <!-- SLIDE 1: TITLE -->
+    <div class="slide active">
+      <div class="card split-layout">
+        <div>
+          <h1 style="margin-bottom: 1rem;">Creative Coding <br><span class="gradient-text">With p5.js</span></h1>
+          <p style="font-size: 1.3rem; margin-bottom: 2rem;">Build art, design games, and shape the future of tech.</p>
+          <a href="#" class="hero-btn" onclick="nextSlide(); return false;">Start Coding ➜</a>
+        </div>
+        <div style="text-align: right; display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+          <div class="highlight-card" style="text-align: left;">
+            <h3 class="nmit-text" style="font-size: 1.4rem; margin-bottom: 0.5rem;">BIT @ NMIT</h3>
+            <p style="font-size: 1rem;">Bachelor of Information Technology. A hands-on degree that takes you from complete beginner to industry professional.</p>
+          </div>
+        </div>
+        <div class="keyboard-hint">Use arrow keys or screen controls to navigate</div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: WHAT IS IT? -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1.5rem;">What is <span class="gradient-text">Information Technology?</span></h2>
+          <p style="margin-bottom: 1.5rem;">It is not just coding in a dark room. It is the intersection of creativity, logic, and problem-solving.</p>
+          <ul>
+            <li><strong>Software Engineering</strong> – Coding games, mobile apps, and VR experiences.</li>
+            <li><strong>Design & UI/UX</strong> – Making software beautiful and user-friendly.</li>
+            <li><strong>Cyber Security</strong> – Protecting systems against hackers.</li>
+            <li><strong>Systems & AI</strong> – Training smart networks and organizing data.</li>
+          </ul>
+        </div>
+        <div class="highlight-grid">
+          <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.5rem;">
+            <div class="big-stat">No.1</div>
+            <p style="font-size: 0.9rem; font-weight: bold;">Growing Industry</p>
+            <p style="font-size: 0.8rem;">Global demand for tech graduates is higher than ever.</p>
+          </div>
+          <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.5rem;">
+            <div class="big-stat" style="background: var(--gradient-nmit); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">100%</div>
+            <p style="font-size: 0.9rem; font-weight: bold;">Hands-on</p>
+            <p style="font-size: 0.8rem;">We build real systems for local Kiwi businesses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: WHY NMIT BIT? -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">The NMIT <span class="nmit-text">BIT Advantage</span></h2>
+          <p style="margin-bottom: 1.5rem;">Why choose NMIT for your Bachelor of Information Technology?</p>
+          <ul>
+            <li class="nmit-bullet"><strong>Learn By Doing</strong> – From day one, you work in labs building web applications and network setups.</li>
+            <li class="nmit-bullet"><strong>Small Class Sizes</strong> – Tutors know your name and support you every step of the way.</li>
+            <li class="nmit-bullet"><strong>Industry-Linked</strong> – In your third year, do a major project solving real problems for a local company.</li>
+            <li class="nmit-bullet"><strong>Pathway Ready</strong> – Majors in Software, Systems, and Cybersecurity.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card" style="border-left: 4px solid var(--secondary);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nelson Tech Hub</h3>
+            <p style="font-size: 0.95rem;">Study in a gorgeous city with a booming boutique tech industry hungry for skilled graduates.</p>
+          </div>
+          <div class="highlight-card" style="border-left: 4px solid var(--primary);">
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Entry Pathways</h3>
+            <p style="font-size: 0.95rem;">Open to high school graduates. No prior programming course prerequisites. We teach you step-by-step.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: MEET P5.JS -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1.5rem;">Meet <span class="gradient-text">p5.js</span></h2>
+          <p style="margin-bottom: 1rem;"><strong>p5.js</strong> is a JavaScript library designed to make coding visual and accessible for artists, designers, and beginners.</p>
+          <p style="margin-bottom: 1.5rem;">We will use the online web editor, meaning <strong>zero installation</strong> is needed. All you need is a browser!</p>
+          <div class="info-box">
+            <h4>Let's Open the Editor:</h4>
+            <p><a href="https://editor.p5js.org/" target="_blank" style="color: var(--accent-cyan); font-weight: bold; text-decoration: underline;">https://editor.p5js.org/</a></p>
+          </div>
+        </div>
+        <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; background: #0b0f19;">
+          <p style="font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent-magenta); margin-bottom: 0.5rem;">// Your code board looks like this:</p>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">setup</span>() {
+  <span class="fn">createCanvas</span>(<span class="number">400</span>, <span class="number">400</span>);
+}
+
+<span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="fn">background</span>(<span class="number">220</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: COORDINATE SYSTEM -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Canvas <span class="gradient-text">Coordinates</span></h2>
+          <p style="margin-bottom: 1.5rem;">In programming, screen layout uses a grid system starting from the <strong>top-left corner</strong>.</p>
+          <ul>
+            <li><strong>(0, 0)</strong> is the top-left coordinate.</li>
+            <li><strong>X-axis</strong> runs horizontally (left to right).</li>
+            <li><strong>Y-axis</strong> runs vertically (top to bottom).</li>
+            <li>`ellipse(x, y, width, height)` draws circular shapes.</li>
+          </ul>
+        </div>
+        <div class="coordinate-diagram">
+          <!-- Top Left Label -->
+          <div class="grid-label" style="top: 15px; left: 15px;">(0, 0)</div>
+          
+          <!-- Bottom Right Label -->
+          <div class="grid-label" style="bottom: 15px; right: 15px;">(width, height)</div>
+          
+          <!-- Circle in Middle -->
+          <div style="width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--accent-cyan); position: relative; background: rgba(6, 182, 212, 0.1);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 6px; height: 6px; background: var(--accent-magenta); border-radius: 50%;"></div>
+          </div>
+          <div class="grid-label" style="margin-top: 110px;">ellipse(x, y, 80, 80)</div>
+
+          <!-- X axis arrow -->
+          <div style="position: absolute; top: 35px; left: 60px; right: 60px; height: 1px; background: rgba(255,255,255,0.25);">
+            <div style="position: absolute; right: 0; top: -4px; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid rgba(255,255,255,0.5);"></div>
+          </div>
+          <div class="grid-label" style="top: 45px; left: 50%;">+ X Direction</div>
+          
+          <!-- Y axis arrow -->
+          <div style="position: absolute; left: 35px; top: 60px; bottom: 60px; width: 1px; background: rgba(255,255,255,0.25);">
+            <div style="position: absolute; bottom: 0; left: -4px; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 8px solid rgba(255,255,255,0.5);"></div>
+          </div>
+          <div class="grid-label" style="left: 45px; top: 50%; transform: rotate(90deg); transform-origin: left top;">+ Y Direction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: GUIDED BUILD -->
+    <div class="slide">
+      <div class="card">
+        <h2 style="margin-bottom: 0.5rem;">Guided Build: <span class="gradient-text">Neon Glow Brush</span></h2>
+        <p style="margin-bottom: 1.25rem;">We will make a dynamic drawing canvas where circles track our mouse and shift colors.</p>
+        
+        <pre><span class="keyword">function</span> <span class="fn">setup</span>() {
+  <span class="fn">createCanvas</span>(<span class="fn">windowWidth</span>, <span class="fn">windowHeight</span>);
+  <span class="fn">background</span>(<span class="number">15</span>, <span class="number">23</span>, <span class="number">42</span>); <span class="comment">// Slate Blue (drawn once!)</span>
+}
+
+<span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="keyword">if</span> (<span class="fn">mouseIsPressed</span>) {
+    <span class="fn">background</span>(<span class="number">15</span>, <span class="number">23</span>, <span class="number">42</span>); <span class="comment">// Clear board if clicked</span>
+  }
+  
+  <span class="fn">fill</span>(<span class="fn">random</span>(<span class="number">100</span>,<span class="number">255</span>), <span class="fn">random</span>(<span class="number">150</span>,<span class="number">255</span>), <span class="fn">random</span>(<span class="number">200</span>,<span class="number">255</span>), <span class="number">120</span>);
+  <span class="fn">noStroke</span>();
+  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
+}</pre>
+        
+        <div class="info-box" style="margin-top: 0.75rem; padding: 0.75rem 1.25rem;">
+          <p style="font-size: 0.95rem;">💡 <strong>Pro Tip:</strong> Moving `background()` to setup lets our brush strokes persist and leave a beautiful neon paint trail!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: LAB CHALLENGE -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Creative Play <span class="gradient-text">& Lab Time</span></h2>
+          <p style="margin-bottom: 1.25rem;">Now it's your turn. Use the reference sheets and make this sketch your own!</p>
+          <ul>
+            <li><strong>Level 1:</strong> Change the shapes. Can you draw neon squares (`rect`) instead of circles? Can you make the brush size larger?</li>
+            <li><strong>Level 2:</strong> Change colors. Alter the numbers in `random()` to make it purely green, hot pink, or purple.</li>
+            <li><strong>Level 3:</strong> Try the **Bubble Catch Game** template (`demos/demo3_game.js`). Customize the speeds and scores!</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card">
+            <h4 style="color: var(--accent-magenta); margin-bottom: 0.5rem;">Quick Command Helper:</h4>
+            <p style="font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-main); line-height: 1.5;">
+              rect(x, y, w, h);<br>
+              fill(r, g, b, opacity);<br>
+              mouseX, mouseY<br>
+              mouseIsPressed
+            </p>
+          </div>
+          <div class="highlight-card" style="background: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.2);">
+            <h4 style="color: var(--secondary); margin-bottom: 0.25rem;">Need Help?</h4>
+            <p style="font-size: 0.9rem;">Ask a tutor! This is how we study in NMIT computer labs: collaborative, experimental, and fun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: THE NMIT CONNECTION -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">From Basic Shapes <span class="nmit-text">to Real Tech</span></h2>
+          <p style="margin-bottom: 1.5rem;">What you did today is just the starting point of a coding journey. How does this translate to NMIT's BIT degree?</p>
+          <ul>
+            <li class="nmit-bullet"><strong>First Year:</strong> Master core coding, responsive web design, databases, and computer hardware.</li>
+            <li class="nmit-bullet"><strong>Second Year:</strong> Build advanced web APIs, study networking configurations, and develop security policies.</li>
+            <li class="nmit-bullet"><strong>Third Year:</strong> Build a major project (like a full application, database system, or network security audit) directly for a local Nelson business.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+          <div class="highlight-card" style="text-align: center;">
+            <p style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Study Structure</p>
+            <h3 style="font-size: 1.8rem; margin: 0.5rem 0;" class="nmit-text">3 Years Full-Time</h3>
+            <p style="font-size: 0.95rem;">Or study part-time while working in tech.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: GRAD CAREERS -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1.25rem;">Where can the <span class="gradient-text">BIT take you?</span></h2>
+          <p style="margin-bottom: 1.5rem;">IT professionals are in high demand across New Zealand. Graduating opens paths to high-paying, creative careers:</p>
+          <div class="highlight-grid">
+            <div class="highlight-card">
+              <h4 style="color: var(--accent-cyan); margin-bottom: 0.25rem;">Software Developer</h4>
+              <p style="font-size: 0.85rem;">Build apps, mobile software, and game mechanics.</p>
+            </div>
+            <div class="highlight-card">
+              <h4 style="color: var(--accent-magenta); margin-bottom: 0.25rem;">Cyber Security Specialist</h4>
+              <p style="font-size: 0.85rem;">Audit systems, block hacks, secure local business data.</p>
+            </div>
+            <div class="highlight-card">
+              <h4 style="color: var(--secondary); margin-bottom: 0.25rem;">Network Engineer</h4>
+              <p style="font-size: 0.85rem;">Architect the infrastructure connecting companies and clouds.</p>
+            </div>
+            <div class="highlight-card">
+              <h4 style="color: var(--primary); margin-bottom: 0.25rem;">UX/UI Designer</h4>
+              <p style="font-size: 0.85rem;">Design the layouts and interfaces people love to use.</p>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-items: center; text-align: center;">
+          <div class="big-stat">$70k+</div>
+          <p style="font-weight: bold; color: var(--text-main);">Typical NZ Graduate Starting Salary</p>
+          <p style="font-size: 0.9rem; max-width: 280px;">With senior roles easily scaling past $120k+.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: WRAP UP & QA -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Take Your Next Step <span class="nmit-text">With NMIT</span></h2>
+          <p style="margin-bottom: 1.5rem;">Have questions about entry criteria, courses, or what it is like to study at the Nelson campus?</p>
+          <ul>
+            <li class="nmit-bullet">Check out the official program at: <a href="https://www.nmit.ac.nz/study/programmes/bachelor-of-information-technology" target="_blank" style="color: var(--secondary); font-weight: bold; text-decoration: underline;">nmit.ac.nz/bit</a></li>
+            <li class="nmit-bullet">Talk to your school careers advisor about NMIT pathway days.</li>
+            <li class="nmit-bullet">Book a campus tour to see our computing labs and chat with tutors!</li>
+          </ul>
+          <a href="https://www.nmit.ac.nz/study/programmes/bachelor-of-information-technology" target="_blank" class="hero-btn" style="margin-top: 1rem; align-self: flex-start;">Explore NMIT BIT ➜</a>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem;">
+          <div class="highlight-card" style="text-align: center; width: 100%; max-width: 300px; border: 2px solid rgba(16, 185, 129, 0.3);">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary);">Questions & Answers</h3>
+            <p style="font-size: 0.95rem;">Ask us anything about studying IT, career paths, or p5.js coding!</p>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Thank you for participating today!</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM FOOTER -->
+  <footer>
+    <div class="slide-counter">
+      Slide <span id="current-slide-num">1</span> of <span id="total-slides-num">10</span>
+    </div>
+    
+    <div class="progress-track">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    
+    <div class="controls">
+      <button onclick="prevSlide()" aria-label="Previous Slide">◀</button>
+      <button onclick="nextSlide()" aria-label="Next Slide">▶</button>
+    </div>
+  </footer>
+
+  <!-- PRESENTATION SCRIPT -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const currentSlideNumEl = document.getElementById('current-slide-num');
+    const totalSlidesNumEl = document.getElementById('total-slides-num');
+    const progressBar = document.getElementById('progress-bar');
+    
+    let currentSlideIndex = 0;
+    const totalSlides = slides.length;
+    
+    totalSlidesNumEl.textContent = totalSlides;
+
+    function updateSlides() {
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlideIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      
+      currentSlideNumEl.textContent = currentSlideIndex + 1;
+      
+      const progressPercent = ((currentSlideIndex + 1) / totalSlides) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+    }
+
+    function nextSlide() {
+      if (currentSlideIndex < totalSlides - 1) {
+        currentSlideIndex++;
+        updateSlides();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlideIndex > 0) {
+        currentSlideIndex--;
+        updateSlides();
+      }
+    }
+
+    // Keyboard controls
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+
+    // Initialize progress bar
+    updateSlides();
+  </script>
+</body>
+</html>
