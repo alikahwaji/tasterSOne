@@ -70,13 +70,13 @@ Copy this into your editor to create a glowing trail brush. Click the canvas to 
 ```javascript
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(10, 15, 30); // Dark space blue
+  background(15, 23, 42); // Deep space dark background
 }
 
 function draw() {
   // Clear the board if clicked
   if (mouseIsPressed) {
-    background(10, 15, 30);
+    background(15, 23, 42);
   }
   
   // Choose random colorful neon shades
@@ -87,7 +87,7 @@ function draw() {
   // Draw the brush circle
   fill(r, g, b, 120); // 120 makes it transparent/glowy
   noStroke();
-  ellipse(mouseX, mouseY, 45, 45);
+  ellipse(mouseX, mouseY, 40, 40);
 }
 ```
 

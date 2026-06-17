@@ -77,7 +77,8 @@ function resetBall() {
   ballX = random(20, width - 20);
   
   // Slightly increase speed as score gets higher to make it challenging!
-  ballSpeed = 5 + Math.floor(score / 5);
+  // Use Math.max to prevent negative scores from slowing down or reversing the ball
+  ballSpeed = 5 + Math.floor(Math.max(0, score) / 5);
   
   // Cap the speed so it's not impossible
   if (ballSpeed > 15) {
