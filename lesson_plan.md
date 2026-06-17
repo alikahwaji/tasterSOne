@@ -14,19 +14,19 @@
 
 ## Timeline Overview
 
-| Time | Duration | Activity | NMIT BIT Promotion Focus |
-| :--- | :--- | :--- | :--- |
-| **09:00 - 09:15** | 15 mins | Part 1: Welcome & The "Why IT?" Hook | What is IT? Tech careers & the NMIT BIT degree value. |
-| **09:15 - 09:35** | 20 mins | Part 2: p5.js Basics (Canvas & Shapes) | Practical learning approach: We teach from scratch! |
-| **09:35 - 10:05** | 30 mins | Part 3: Guided Build (Interactive Brush) | Software Engineering major & Web development topics. |
-| **10:05 - 10:25** | 20 mins | Part 4: Creative Play & Challenge Lab | Student-led project work, simulating NMIT's lab style. |
-| **10:25 - 10:45** | 20 mins | Part 5: Showcase & Study Pathways | How to enrol, student success stories, Q&A. |
+| Time | Duration | Activity | Slide Range | NMIT BIT Promotion Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| **09:00 - 09:15** | 15 mins | Part 1: Welcome & The "Why IT?" Hook | Slides 1-7 | What is IT? Tech careers & the NMIT BIT degree value. |
+| **09:15 - 09:35** | 20 mins | Part 2: p5.js Basics (Canvas & Shapes) | Slides 8-15 | Practical learning approach: We teach from scratch! |
+| **09:35 - 10:05** | 30 mins | Part 3: Guided Build (Interactive Brush) | Slides 16-24 | Software Engineering major & Web development topics. |
+| **10:05 - 10:25** | 20 mins | Part 4: Creative Play & Challenge Lab | Slides 25-30 | Student-led project work, simulating NMIT's lab style. |
+| **10:25 - 10:45** | 20 mins | Part 5: Showcase & Study Pathways | Slides 31-33 | How to enrol, student success stories, Q&A. |
 
 ---
 
 ## Detailed Step-by-Step Guide
 
-### Part 1: Welcome & The "Why IT?" Hook (15 mins)
+### Part 1: Welcome & The "Why IT?" Hook (15 mins) — Slides 1-7
 * **Objective**: Grab attention, break down negative stereotypes about coding, and introduce NMIT.
 * **Talking Points**:
   - Welcome everyone to the NMIT BIT Taster session! Introduce yourself and any student leaders/tutors helping out.
@@ -40,7 +40,7 @@
 
 ---
 
-### Part 2: p5.js Basics (20 mins)
+### Part 2: p5.js Basics (20 mins) — Slides 8-15
 * **Objective**: Get everyone logged in and writing their first lines of visual code.
 * **Activity**:
   1. Have students open their browsers and navigate to: **[https://editor.p5js.org/](https://editor.p5js.org/)**
@@ -78,7 +78,7 @@
 
 ---
 
-### Part 3: Guided Build: Digital Neon Brush (30 mins)
+### Part 3: Guided Build: Digital Neon Brush (30 mins) — Slides 16-24
 * **Objective**: Introduce variables, movement, interaction, and simple conditional statements.
 * **Activity**:
   1. Explain **variables**: placeholders for values that change.
@@ -117,7 +117,7 @@
 
 ---
 
-### Part 4: Creative Play & Challenge Lab (20 mins)
+### Part 4: Creative Play & Challenge Lab (20 mins) — Slides 25-30
 * **Objective**: Give students autonomy, let them experiment, and solve minor bugs on their own.
 * **Task**: Give students 20 minutes to custom design their sketch. Provide them with challenges:
   - **Challenge 1 (Visuals)**: Instead of circles, draw squares (`rect(mouseX, mouseY, size, size)`) or draw multiple shapes at once.
@@ -131,7 +131,7 @@
 
 ---
 
-### Part 5: Showcase & Study Pathways (20 mins)
+### Part 5: Showcase & Study Pathways (20 mins) — Slides 31-33
 * **Objective**: Celebrated achievement, share student work, and present the NMIT BIT academic pathway.
 * **Activity**:
   1. Ask students to share their p5.js screens or generate a share link (`File -> Share -> Present`).

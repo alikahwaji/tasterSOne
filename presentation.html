@@ -195,7 +195,7 @@
     }
 
     /* TYPOGRAPHY */
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: 'Outfit', sans-serif;
       font-weight: 900;
       line-height: 1.15;
@@ -396,6 +396,10 @@
       box-shadow: 0 12px 25px rgba(16, 185, 129, 0.5);
     }
 
+    .hero-btn:active {
+      transform: translateY(0);
+    }
+
     .keyboard-hint {
       position: absolute;
       bottom: 1rem;
@@ -474,106 +478,181 @@
       </div>
     </div>
 
-    <!-- SLIDE 2: AGENDA -->
+    <!-- SLIDE 2: INTERACTIVE ICEBREAKER -->
     <div class="slide">
       <div class="card split-layout">
         <div>
-          <h2 style="margin-bottom: 1rem;">Session <span class="gradient-text">Agenda</span></h2>
-          <p style="margin-bottom: 1.5rem;">What we are going to cover in today's <strong>1 Hour 45 Minutes</strong> session:</p>
-          <ul style="gap: 0.75rem;">
-            <li><strong>Introduction (15 mins)</strong> – Demystifying IT & NMIT BIT pathway.</li>
-            <li><strong>p5.js Basics (20 mins)</strong> – Coordinates, shapes, and colors.</li>
-            <li><strong>Guided Build (30 mins)</strong> – Coding a dynamic "Neon Brush" tool.</li>
-            <li><strong>Creative Lab (20 mins)</strong> – Custom design & simple catch game play.</li>
-            <li><strong>Showcase & Q&A (20 mins)</strong> – Share work & NMIT study options.</li>
+          <h2 style="margin-bottom: 1rem;">Interactive <span class="gradient-text">Icebreaker</span></h2>
+          <p style="margin-bottom: 1.5rem;">Let's start with a quick question to the room:</p>
+          <h3 style="color: var(--accent-cyan); font-size: 1.75rem; margin-bottom: 1rem;">"What comes to mind when you hear 'Information Technology'?"</h3>
+          <ul>
+            <li>Is it just servers and coding in a basement?</li>
+            <li>Or is it game design, digital art, security, and smart tech?</li>
           </ul>
         </div>
         <div style="display: flex; flex-direction: column; gap: 1rem;">
           <div class="highlight-card" style="border-left: 4px solid var(--accent-magenta);">
-            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-main);">Your Goals Today:</h3>
-            <ul style="gap: 0.5rem; font-size: 0.95rem;">
-              <li style="font-size: 0.95rem;">Write your first lines of JavaScript code.</li>
-              <li style="font-size: 0.95rem;">Learn coordinate math and RGB coloring.</li>
-              <li style="font-size: 0.95rem;">Build an interactive digital drawing app.</li>
-              <li style="font-size: 0.95rem;">Play and customize a bubble catch game.</li>
-            </ul>
+            <h4 style="color: var(--accent-magenta); margin-bottom: 0.5rem;">💡 Fun Fact:</h4>
+            <p style="font-size: 0.95rem;">Almost every modern creative industry—movies, music, fashion, and gaming—runs on IT backend infrastructure built by developers!</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 3: WHAT IS IT? -->
+    <!-- SLIDE 3: WORKSHOP ROADMAP -->
     <div class="slide">
       <div class="card split-layout">
         <div>
-          <h2 style="margin-bottom: 1.5rem;">What is <span class="gradient-text">Information Technology?</span></h2>
-          <p style="margin-bottom: 1.5rem;">It is not just coding in a dark room. It is the intersection of creativity, logic, and problem-solving.</p>
-          <ul>
-            <li><strong>Software Engineering</strong> – Coding games, mobile apps, and VR experiences.</li>
-            <li><strong>Design & UI/UX</strong> – Making software beautiful and user-friendly.</li>
-            <li><strong>Cyber Security</strong> – Protecting systems against hackers.</li>
-            <li><strong>Systems & AI</strong> – Training smart networks and organizing data.</li>
-          </ul>
-        </div>
-        <div class="highlight-grid">
-          <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.5rem;">
-            <div class="big-stat">No.1</div>
-            <p style="font-size: 0.9rem; font-weight: bold;">Growing Industry</p>
-            <p style="font-size: 0.8rem;">Global demand for tech graduates is higher than ever.</p>
-          </div>
-          <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.5rem;">
-            <div class="big-stat" style="background: var(--gradient-nmit); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">100%</div>
-            <p style="font-size: 0.9rem; font-weight: bold;">Hands-on</p>
-            <p style="font-size: 0.8rem;">We build real systems for local Kiwi businesses.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 4: THE NMIT BIT ADVANTAGE -->
-    <div class="slide">
-      <div class="card split-layout">
-        <div>
-          <h2 style="margin-bottom: 1rem;">The NMIT <span class="nmit-text">BIT Advantage</span></h2>
-          <p style="margin-bottom: 1.5rem;">Why choose NMIT for your Bachelor of Information Technology?</p>
-          <ul>
-            <li class="nmit-bullet"><strong>Learn By Doing</strong> – From day one, you work in labs building web applications and network setups.</li>
-            <li class="nmit-bullet"><strong>Small Class Sizes</strong> – Tutors know your name and support you every step of the way.</li>
-            <li class="nmit-bullet"><strong>Industry-Linked</strong> – In your third year, do a major project solving real problems for a local company.</li>
-            <li class="nmit-bullet"><strong>Pathway Ready</strong> – Majors in Software, Systems, and Cybersecurity.</li>
+          <h2 style="margin-bottom: 1rem;">Workshop <span class="gradient-text">Roadmap</span></h2>
+          <p style="margin-bottom: 1.5rem;">Here is how we will spend our <strong>1 Hour 45 Minutes</strong> together:</p>
+          <ul style="gap: 0.5rem;">
+            <li><strong>Part 1: Welcome & Hook</strong> (15 mins) – Tech careers & NMIT.</li>
+            <li><strong>Part 2: p5.js Basics</strong> (20 mins) – Drawing static shapes.</li>
+            <li><strong>Part 3: Guided Build</strong> (30 mins) – Coding a Neon Glow Brush.</li>
+            <li><strong>Part 4: Challenge Lab</strong> (20 mins) – Custom play & games.</li>
+            <li><strong>Part 5: Showcase & Q&A</strong> (20 mins) – Shared work & study paths.</li>
           </ul>
         </div>
         <div style="display: flex; flex-direction: column; gap: 1rem;">
           <div class="highlight-card" style="border-left: 4px solid var(--secondary);">
-            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Nelson Tech Hub</h3>
-            <p style="font-size: 0.95rem;">Study in a gorgeous city with a booming boutique tech industry hungry for skilled graduates.</p>
-          </div>
-          <div class="highlight-card" style="border-left: 4px solid var(--primary);">
-            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Entry Pathways</h3>
-            <p style="font-size: 0.95rem;">Open to high school graduates. No prior programming course prerequisites. We teach you step-by-step.</p>
+            <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Your Goal Today:</h4>
+            <p style="font-size: 0.95rem;">Create a custom interactive drawing app or catch game, and learn key coding concepts from scratch!</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 5: MEET P5.JS -->
+    <!-- SLIDE 4: DEMYSTIFYING TECH -->
     <div class="slide">
       <div class="card split-layout">
         <div>
-          <h2 style="margin-bottom: 1.5rem;">Meet <span class="gradient-text">p5.js</span></h2>
-          <p style="margin-bottom: 1rem;"><strong>p5.js</strong> is a JavaScript library designed to make coding visual and accessible for artists, designers, and beginners.</p>
-          <p style="margin-bottom: 1.5rem;">We will use the online web editor, meaning <strong>zero installation</strong> is needed. All you need is a browser!</p>
-          <div class="info-box">
-            <h4>Let's Open the Editor:</h4>
-            <p><a href="https://editor.p5js.org/" target="_blank" style="color: var(--accent-cyan); font-weight: bold; text-decoration: underline;">https://editor.p5js.org/</a></p>
+          <h2 style="margin-bottom: 1rem;">Demystifying <span class="gradient-text">Tech Careers</span></h2>
+          <p style="margin-bottom: 1.5rem;">IT is vast and highly diverse. Which track matches your style?</p>
+          <ul>
+            <li><strong>Software Engineering:</strong> Building game logic, APIs, and VR platforms.</li>
+            <li><strong>Design & UI/UX:</strong> Creating layout aesthetics and user experiences.</li>
+            <li><strong>Data Analytics:</strong> Making predictions using AI and smart databases.</li>
+            <li><strong>Cyber Security:</strong> Hacking systems ethically to secure company files.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Software vs. Systems</h4>
+            <p style="font-size: 0.95rem;">Whether you want to build the front-end interface, configure backend cloud servers, or secure networks, there is a role for you.</p>
           </div>
         </div>
-        <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; background: #0b0f19;">
-          <p style="font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent-magenta); margin-bottom: 0.5rem;">// Your code board looks like this:</p>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: NELSON & NZ TECH LANDSCAPES -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1.25rem;">The NZ <span class="gradient-text">Tech Sector</span></h2>
+          <p style="margin-bottom: 1.5rem;">The digital tech sector is one of New Zealand's fastest-growing and highest-paying industries.</p>
+          <ul>
+            <li>Nelson/Marlborough hosts a booming boutique tech hub.</li>
+            <li>High demand for junior developers, web admins, and cybersecurity analysts.</li>
+            <li>Strong remote-work culture allows local talent to work globally from Nelson.</li>
+          </ul>
+        </div>
+        <div class="highlight-grid">
+          <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.5rem;">
+            <div class="big-stat">$70,000+</div>
+            <p style="font-size: 0.9rem; font-weight: bold;">Grad Entry Salary</p>
+            <p style="font-size: 0.8rem;">Average starting rate for Kiwi tech graduates.</p>
+          </div>
+          <div class="highlight-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.5rem;">
+            <div class="big-stat" style="background: var(--gradient-nmit); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">120k+</div>
+            <p style="font-size: 0.9rem; font-weight: bold;">Senior Roles</p>
+            <p style="font-size: 0.8rem;">Experienced developers easily exceed six figures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: THE NMIT BIT PATH -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">The NMIT <span class="nmit-text">BIT Approach</span></h2>
+          <p style="margin-bottom: 1.5rem;">The Bachelor of Information Technology (BIT) at NMIT is designed for active learners.</p>
+          <ul>
+            <li class="nmit-bullet"><strong>Zero Prerequisites:</strong> We teach coding and hardware systems completely from scratch.</li>
+            <li class="nmit-bullet"><strong>100% Practical Labs:</strong> Ditch dry lectures; we code and configure directly in lab environments.</li>
+            <li class="nmit-bullet"><strong>Industry Projects:</strong> Work on real software or networking projects with local businesses in Year 3.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card" style="border-left: 4px solid var(--primary);">
+            <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Interactive Learning</h4>
+            <p style="font-size: 0.95rem;">You learn programming by typing, testing, and debugging. If you enjoy solving visual puzzles, you will love our software labs!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: SESSION SHOWCASE PREVIEW -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1.5rem;">What We Are <span class="gradient-text">Building Today</span></h2>
+          <p style="margin-bottom: 1.5rem;">We will write real JavaScript using p5.js to build a dynamic painting application.</p>
+          <ul>
+            <li>Cursor-tracking geometry drawing.</li>
+            <li>Vibrant neon color shifts using random parameters.</li>
+            <li>Glowing transparency overlay trails.</li>
+            <li>Interactive keyboard and mouse control triggers.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="highlight-card" style="width: 100%; border: 2px dashed var(--accent-magenta); border-radius: 16px; padding: 2rem; text-align: center;">
+            <h3 class="gradient-text" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Let's Get Creative</h3>
+            <p style="font-size: 1rem;">Ready to write code? Let's open the p5.js editor in the next steps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: INTRODUCTION TO P5.JS -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1.5rem;">Introduction to <span class="gradient-text">p5.js</span></h2>
+          <p style="margin-bottom: 1.5rem;"><strong>p5.js</strong> is a visual-first JavaScript library designed specifically for artists, designers, educators, and beginners.</p>
+          <ul>
+            <li>Simplifies drawing complex math shapes in browser.</li>
+            <li>Exposes simple commands for coordinates, colors, and motion.</li>
+            <li>Perfect sandbox for learning fundamental programming loops.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card" style="border-left: 4px solid var(--accent-cyan);">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Why p5.js?</h4>
+            <p style="font-size: 0.95rem;">Traditional code starts with text outputs like "Hello World." With p5.js, we immediately start drawing, making logic bugs easy to see and correct!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: EXPLORING THE EDITOR -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1.25rem;">The p5.js <span class="gradient-text">Web Editor</span></h2>
+          <p style="margin-bottom: 1rem;">Open your browser and navigate to: <a href="https://editor.p5js.org/" target="_blank" style="color: var(--accent-cyan); text-decoration: underline;">editor.p5js.org</a></p>
+          <p style="margin-bottom: 1.25rem;">The editor is structured into three main zones:</p>
+          <ul>
+            <li><strong>Left Panel (Code Editor):</strong> Write your scripts and statements.</li>
+            <li><strong>Right Panel (Preview Canvas):</strong> See shapes draw instantly.</li>
+            <li><strong>Top Bar (Play & Stop):</strong> Run your loop or halt execution.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem; margin-bottom: 0.25rem;">// Editor Preview Setup</h4>
           <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">setup</span>() {
   <span class="fn">createCanvas</span>(<span class="number">400</span>, <span class="number">400</span>);
 }
-
 <span class="keyword">function</span> <span class="fn">draw</span>() {
   <span class="fn">background</span>(<span class="number">220</span>);
 }</pre>
@@ -581,17 +660,37 @@
       </div>
     </div>
 
-    <!-- SLIDE 6: CANVAS COORDINATES -->
+    <!-- SLIDE 10: SETUP VS. DRAW LIFECYCLE -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Setup vs. <span class="gradient-text">Draw Loops</span></h2>
+          <p style="margin-bottom: 1.5rem;">Understanding these two core functions is crucial for p5.js animation.</p>
+          <ul>
+            <li>`setup()`: Runs **exactly once** when the program loads. Use it to configure initial options like `createCanvas`.</li>
+            <li>`draw()`: Runs **continuously** at 60 frames per second (60 FPS) in a repeating loop. Think of it like pages flipping in an animation flipbook.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card" style="border-left: 4px solid var(--secondary);">
+            <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Why separate them?</h4>
+            <p style="font-size: 0.95rem;">Initialization (setting bounds, canvas sizing) only needs to happen once. Redrawing animations, moving items, and tracking mouse coordinates happen constantly in `draw()`!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 11: CANVAS COORDINATES -->
     <div class="slide">
       <div class="card split-layout">
         <div>
           <h2 style="margin-bottom: 1rem;">Canvas <span class="gradient-text">Coordinates</span></h2>
-          <p style="margin-bottom: 1.5rem;">In programming, screen layout uses a grid system starting from the <strong>top-left corner</strong>.</p>
+          <p style="margin-bottom: 1.5rem;">Unlike school graphs where the origin `(0,0)` is in the center, screens start at the **top-left corner**.</p>
           <ul>
-            <li><strong>(0, 0)</strong> is the top-left coordinate.</li>
-            <li><strong>X-axis</strong> runs horizontally (left to right).</li>
-            <li><strong>Y-axis</strong> runs vertically (top to bottom).</li>
-            <li>`ellipse(x, y, width, height)` draws circular shapes.</li>
+            <li>Origin `(0, 0)` is the very top-left pixel.</li>
+            <li><strong>X coordinate:</strong> Distance moving from left to right.</li>
+            <li><strong>Y coordinate:</strong> Distance moving from top to bottom.</li>
+            <li>Grid boundaries extend to the `width` and `height` of the canvas.</li>
           </ul>
         </div>
         <div class="coordinate-diagram">
@@ -622,34 +721,332 @@
       </div>
     </div>
 
-    <!-- SLIDE 7: GUIDED BUILD -->
+    <!-- SLIDE 12: GRID POSITIONS -->
     <div class="slide">
-      <div class="card">
-        <h2 style="margin-bottom: 0.5rem;">Guided Build: <span class="gradient-text">Neon Glow Brush</span></h2>
-        <p style="margin-bottom: 1.25rem;">We will make a dynamic drawing canvas where circles track our mouse and shift colors.</p>
-        
-        <pre><span class="keyword">function</span> <span class="fn">setup</span>() {
-  <span class="fn">createCanvas</span>(<span class="fn">windowWidth</span>, <span class="fn">windowHeight</span>);
-  <span class="fn">background</span>(<span class="number">15</span>, <span class="number">23</span>, <span class="number">42</span>); <span class="comment">// Slate Blue (drawn once!)</span>
-}
-
-<span class="keyword">function</span> <span class="fn">draw</span>() {
-  <span class="keyword">if</span> (<span class="fn">mouseIsPressed</span>) {
-    <span class="fn">background</span>(<span class="number">15</span>, <span class="number">23</span>, <span class="number">42</span>); <span class="comment">// Clear board if clicked</span>
-  }
-  
-  <span class="fn">fill</span>(<span class="fn">random</span>(<span class="number">100</span>,<span class="number">255</span>), <span class="fn">random</span>(<span class="number">150</span>,<span class="number">255</span>), <span class="fn">random</span>(<span class="number">200</span>,<span class="number">255</span>), <span class="number">120</span>);
-  <span class="fn">noStroke</span>();
-  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
-}</pre>
-        
-        <div class="info-box" style="margin-top: 0.75rem; padding: 0.75rem 1.25rem;">
-          <p style="font-size: 0.95rem;">💡 <strong>Pro Tip:</strong> Moving `background()` to setup lets our brush strokes persist and leave a beautiful neon paint trail!</p>
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Grid <span class="gradient-text">Positions</span></h2>
+          <p style="margin-bottom: 1.5rem;">To draw shapes, you must tell p5.js the exact horizontal (X) and vertical (Y) coordinate values.</p>
+          <ul>
+            <li>If canvas size is `createCanvas(600, 400)`:</li>
+            <li>The center point is `(300, 200)`.</li>
+            <li>The middle-left edge is `(0, 200)`.</li>
+            <li>The bottom-center edge is `(300, 400)`.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Quick Formula:</h4>
+            <p style="font-size: 0.95rem; font-family: 'Fira Code', monospace;">
+              X = width / 2; // Center horizontal<br>
+              Y = height / 2; // Center vertical
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 8: INTERACTIVE EDITOR -->
+    <!-- SLIDE 13: DRAWING SHAPES: ELLIPSE -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Drawing Circles: <span class="gradient-text">ellipse()</span></h2>
+          <p style="margin-bottom: 1.5rem;">To draw a circle or oval, use the built-in `ellipse` function with four parameters:</p>
+          <pre style="margin-bottom: 1.5rem;"><span class="fn">ellipse</span>(x, y, width, height);</pre>
+          <ul>
+            <li>`x`: Horizontal pixel coordinate of circle center.</li>
+            <li>`y`: Vertical pixel coordinate of circle center.</li>
+            <li>`width`: Horizontal width of the shape in pixels.</li>
+            <li>`height`: Vertical height of the shape in pixels.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Center Circle Example</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="fn">background</span>(<span class="number">30</span>);
+  <span class="comment">// Draw circle at X=200, Y=200, size 80x80</span>
+  <span class="fn">ellipse</span>(<span class="number">200</span>, <span class="number">200</span>, <span class="number">80</span>, <span class="number">80</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 14: DRAWING SHAPES: RECTANGLE -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Drawing Boxes: <span class="gradient-text">rect()</span></h2>
+          <p style="margin-bottom: 1.5rem;">Drawing rectangles is similar, but they anchor from their **top-left corner** instead of the center.</p>
+          <pre style="margin-bottom: 1.5rem;"><span class="fn">rect</span>(x, y, width, height, [radius]);</pre>
+          <ul>
+            <li>`x`: Horizontal pixel position of the top-left corner.</li>
+            <li>`y`: Vertical pixel position of the top-left corner.</li>
+            <li>`width`: Horizontal width of the box.</li>
+            <li>`height`: Vertical height of the box.</li>
+            <li>`[radius]`: (Optional) Curvature of the corners.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Rectangle with Rounded Corners</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="fn">background</span>(<span class="number">30</span>);
+  <span class="comment">// Box at X=150, Y=100, size 120x80, corner radius 10</span>
+  <span class="fn">rect</span>(<span class="number">150</span>, <span class="number">100</span>, <span class="number">120</span>, <span class="number">80</span>, <span class="number">10</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 15: COLORING WITH RGB -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Coloring: <span class="gradient-text">RGB Values</span></h2>
+          <p style="margin-bottom: 1.5rem;">p5.js shapes are filled using Red, Green, and Blue color parameters (values scale from **0 to 255**).</p>
+          <pre style="margin-bottom: 1.5rem;"><span class="fn">fill</span>(red, green, blue);</pre>
+          <ul>
+            <li>`fill(255, 0, 0)`: Bright Red.</li>
+            <li>`fill(0, 255, 0)`: Vibrant Green.</li>
+            <li>`fill(0, 0, 255)`: Deep Blue.</li>
+            <li>`fill(255)`: White (Single value scales from 0/black to 255/white).</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card" style="border-left: 4px solid var(--accent-magenta);">
+            <h4 style="color: var(--accent-magenta); margin-bottom: 0.5rem;">Styling Tip:</h4>
+            <p style="font-size: 0.95rem;">To remove the outline borders on shapes, call `noStroke()` before drawing them. To set border thickness, use `stroke(r, g, b)` and `strokeWeight(pixels)`.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 16: NEON BRUSH OBJECTIVES -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Neon Brush <span class="gradient-text">Objectives</span></h2>
+          <p style="margin-bottom: 1.5rem;">Now let's build our main project step-by-step: an interactive drawing brush.</p>
+          <ul>
+            <li>Follow along in your editor.</li>
+            <li>We will use mouse variables, dynamic transparency, random variables, and conditional input tests.</li>
+            <li>Every step builds onto the previous lines of code.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="highlight-card" style="width: 100%; border: 2px dashed var(--secondary); border-radius: 16px; padding: 1.5rem; text-align: center;">
+            <h3 class="nmit-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Workshop Project</h3>
+            <p style="font-size: 0.95rem;">Follow the slides to assemble the code directly into the p5.js editor playground!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 17: STEP 1: SETUP & CANVAS -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 1: <span class="gradient-text">Canvas Setup</span></h2>
+          <p style="margin-bottom: 1.5rem;">We will scale the drawing canvas to fit the full browser window and set a slate dark background.</p>
+          <ul>
+            <li>`windowWidth` & `windowHeight` are built-in variables containing the browser frame dimensions.</li>
+            <li>We write background once in `setup()` to clear the screen at initialization.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Type this in your editor:</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">setup</span>() {
+  <span class="comment">// Fit canvas to window dimensions</span>
+  <span class="fn">createCanvas</span>(<span class="fn">windowWidth</span>, <span class="fn">windowHeight</span>);
+  <span class="comment">// Set slate blue background</span>
+  <span class="fn">background</span>(<span class="number">15</span>, <span class="number">23</span>, <span class="number">42</span>);
+}
+<span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="comment">// Empty for now</span>
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 18: STEP 2: CURSOR TRACKER -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 2: <span class="gradient-text">Cursor Tracker</span></h2>
+          <p style="margin-bottom: 1.5rem;">To draw shapes right at the mouse tip, we replace absolute coordinate values with system variables.</p>
+          <ul>
+            <li>`mouseX`: Stores current horizontal cursor coordinate.</li>
+            <li>`mouseY`: Stores current vertical cursor coordinate.</li>
+            <li>These variables update automatically on every frame.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Add code to the draw function:</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="comment">// Clear background with solid color</span>
+  <span class="fn">background</span>(<span class="number">15</span>, <span class="number">23</span>, <span class="number">42</span>);
+  
+  <span class="comment">// Draw circle tracking mouse cursor</span>
+  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 19: STEP 3: FLIPBOOK CONCEPT -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 3: <span class="gradient-text">The Trail Effect</span></h2>
+          <p style="margin-bottom: 1.5rem;">Why does our circle not leave a line? Because we clear the canvas every frame using `background()` inside `draw()`!</p>
+          <ul>
+            <li>Remove `background(15, 23, 42)` from `draw()`.</li>
+            <li>Now background only runs once inside `setup()`.</li>
+            <li>Each circle stacks on top of the previous drawing, leaving a brush line trail!</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Remove background from draw():</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="comment">// Background is gone! Circles stack up</span>
+  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 20: STEP 4: GENERATING RANDOM NUMBERS -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 4: <span class="gradient-text">Random Values</span></h2>
+          <p style="margin-bottom: 1.5rem;">To make our brush look dynamic and creative, we will generate unpredictable numeric offsets.</p>
+          <ul>
+            <li>`random(min, max)`: Selects a random decimal between two bounds.</li>
+            <li>`let`: Declares a local variable placeholder to store the temporary values.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Declare color variables inside draw():</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="comment">// Choose random color components</span>
+  <span class="keyword">let</span> r = <span class="fn">random</span>(<span class="number">100</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> g = <span class="fn">random</span>(<span class="number">150</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> b = <span class="fn">random</span>(<span class="number">200</span>, <span class="number">255</span>);
+  
+  <span class="comment">// ellipse tracking follows next...</span>
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 21: STEP 5: RAINBOW SHADING -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 5: <span class="gradient-text">Dynamic Shading</span></h2>
+          <p style="margin-bottom: 1.5rem;">Now we connect our random variables to our shape's color properties.</p>
+          <ul>
+            <li>Pass `r`, `g`, and `b` variables directly into `fill()`.</li>
+            <li>Call `noStroke()` to remove shape borders for a cleaner neon look.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Add color styling commands:</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="keyword">let</span> r = <span class="fn">random</span>(<span class="number">100</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> g = <span class="fn">random</span>(<span class="number">150</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> b = <span class="fn">random</span>(<span class="number">200</span>, <span class="number">255</span>);
+  
+  <span class="fn">fill</span>(r, g, b);
+  <span class="fn">noStroke</span>();
+  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 22: STEP 6: NEON GLOW ALPHA -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 6: <span class="gradient-text">Alpha Blending</span></h2>
+          <p style="margin-bottom: 1.5rem;">To create a glowing "neon" trail, we add a fourth parameter to `fill()` to control transparency (Alpha).</p>
+          <ul>
+            <li>Alpha scale goes from `0` (invisible) to `255` (completely solid).</li>
+            <li>Let's use `120` to create a semi-transparent, overlapping blending effect.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Change the fill opacity:</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="keyword">let</span> r = <span class="fn">random</span>(<span class="number">100</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> g = <span class="fn">random</span>(<span class="number">150</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> b = <span class="fn">random</span>(<span class="number">200</span>, <span class="number">255</span>);
+  
+  <span class="comment">// 120 sets opacity (transparency trail)</span>
+  <span class="fn">fill</span>(r, g, b, <span class="number">120</span>);
+  <span class="fn">noStroke</span>();
+  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 23: STEP 7: CONDITIONAL LOGIC -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 7: <span class="gradient-text">Conditional Logic</span></h2>
+          <p style="margin-bottom: 1.5rem;">What if we make a mistake and want to erase the canvas? We can clear the board using an `if` conditional statement.</p>
+          <ul>
+            <li>An `if` block checks if a condition is true before running code inside its curly brackets `{}`.</li>
+            <li>`mouseIsPressed`: A built-in system variable that evaluates to `true` when clicked.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card" style="border-left: 4px solid var(--accent-cyan);">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Conditional Syntax:</h4>
+            <p style="font-size: 0.95rem; font-family: 'Fira Code', monospace;">
+              if (condition) {<br>
+              &nbsp;&nbsp;// code runs here if true<br>
+              }
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 24: STEP 8: SCREEN CLEARING -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Step 8: <span class="gradient-text">Wiping the Canvas</span></h2>
+          <p style="margin-bottom: 1.5rem;">Combine the conditional checks to paint the background slate blue again when the user clicks the mouse.</p>
+          <ul>
+            <li>Type this at the very beginning of the `draw()` loop.</li>
+            <li>This clears away old trails and resets the canvas cleanly.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Add the clear canvas action to draw():</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="comment">// Clear canvas if mouse is clicked</span>
+  <span class="keyword">if</span> (<span class="fn">mouseIsPressed</span> === <span class="number">true</span>) {
+    <span class="fn">background</span>(<span class="number">15</span>, <span class="number">23</span>, <span class="number">42</span>);
+  }
+  
+  <span class="keyword">let</span> r = <span class="fn">random</span>(<span class="number">100</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> g = <span class="fn">random</span>(<span class="number">150</span>, <span class="number">255</span>);
+  <span class="keyword">let</span> b = <span class="fn">random</span>(<span class="number">200</span>, <span class="number">255</span>);
+  <span class="fn">fill</span>(r, g, b, <span class="number">120</span>);
+  <span class="fn">noStroke</span>();
+  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 25: INTERACTIVE CANVAS PLAYGROUND -->
     <div class="slide">
       <div class="card" style="padding: 1.5rem 2.5rem; display: flex !important; flex-direction: column; justify-content: flex-start; gap: 0.75rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
@@ -662,110 +1059,196 @@
       </div>
     </div>
 
-    <!-- SLIDE 9: LAB CHALLENGE -->
+    <!-- SLIDE 26: CHALLENGE LAB OVERVIEW -->
     <div class="slide">
       <div class="card split-layout">
         <div>
-          <h2 style="margin-bottom: 1rem;">Creative Play <span class="gradient-text">& Lab Time</span></h2>
-          <p style="margin-bottom: 1.25rem;">Now it's your turn. Use the reference sheets and make this sketch your own!</p>
+          <h2 style="margin-bottom: 1rem;">Creative <span class="gradient-text">Challenge Lab</span></h2>
+          <p style="margin-bottom: 1.5rem;">Now it's your turn! Try to customize and expand the brush codebase you built.</p>
           <ul>
-            <li><strong>Level 1:</strong> Change the shapes. Can you draw neon squares (`rect`) instead of circles? Can you make the brush size larger?</li>
-            <li><strong>Level 2:</strong> Change colors. Alter the numbers in `random()` to make it purely green, hot pink, or purple.</li>
-            <li><strong>Level 3:</strong> Try the **Bubble Catch Game** template (`demos/demo3_game.js`). Customize the speeds and scores!</li>
+            <li>Modify shape sizes, sizes, and outlines.</li>
+            <li>Make colors reflect specific themes (e.g. ice, fire, space).</li>
+            <li>Use coordinates math to build advanced interactivity.</li>
           </ul>
         </div>
         <div style="display: flex; flex-direction: column; gap: 1rem;">
-          <div class="highlight-card">
-            <h4 style="color: var(--accent-magenta); margin-bottom: 0.5rem;">Quick Command Helper:</h4>
-            <p style="font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--text-main); line-height: 1.5;">
-              rect(x, y, w, h);<br>
-              fill(r, g, b, opacity);<br>
-              mouseX, mouseY<br>
-              mouseIsPressed
-            </p>
-          </div>
-          <div class="highlight-card" style="background: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.2);">
-            <h4 style="color: var(--secondary); margin-bottom: 0.25rem;">Need Help?</h4>
-            <p style="font-size: 0.9rem;">Ask a tutor! This is how we study in NMIT computer labs: collaborative, experimental, and fun.</p>
+          <div class="highlight-card" style="border-left: 4px solid var(--secondary);">
+            <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">Self-Guided Study:</h4>
+            <p style="font-size: 0.95rem;">This represents NMIT's lab style. You get a solid codebase framework and the freedom to experiment and customize your assets.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 10: THE NMIT CONNECTION -->
+    <!-- SLIDE 27: CHALLENGE LEVEL 1: SHAPE VARIATIONS -->
     <div class="slide">
       <div class="card split-layout">
         <div>
-          <h2 style="margin-bottom: 1rem;">From Basic Shapes <span class="nmit-text">to Real Tech</span></h2>
-          <p style="margin-bottom: 1.5rem;">What you did today is just the starting point of a coding journey. How does this translate to NMIT's BIT degree?</p>
+          <h2 style="margin-bottom: 1rem;">Level 1: <span class="gradient-text">Shape Variations</span></h2>
+          <p style="margin-bottom: 1.5rem;">Tweak shapes and sizes to change brush characteristics:</p>
           <ul>
-            <li class="nmit-bullet"><strong>First Year:</strong> Master core coding, responsive web design, databases, and computer hardware.</li>
-            <li class="nmit-bullet"><strong>Second Year:</strong> Build advanced web APIs, study networking configurations, and develop security policies.</li>
-            <li class="nmit-bullet"><strong>Third Year:</strong> Build a major project (like a full application, database system, or network security audit) directly for a local Nelson business.</li>
+            <li><strong>Draw Squares:</strong> Swap `ellipse(...)` with `rect(mouseX, mouseY, 40, 40)`.</li>
+            <li><strong>Change Size:</strong> Tweak the width and height arguments to make the brush larger or smaller.</li>
+            <li><strong>Draw Multiple:</strong> Add a second shape call (like a secondary smaller circle next to the cursor) to paint offsets.</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Double Brush Example:</h4>
+          <pre style="font-size: 0.85rem;"><span class="comment">// Draw main cursor circle</span>
+<span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, <span class="number">40</span>, <span class="number">40</span>);
+<span class="comment">// Draw smaller offset circle</span>
+<span class="fn">ellipse</span>(<span class="fn">mouseX</span> + <span class="number">20</span>, <span class="fn">mouseY</span> + <span class="number">20</span>, <span class="number">15</span>, <span class="number">15</span>);</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 28: CHALLENGE LEVEL 2: ADVANCED MATH BRUSH -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Level 2: <span class="gradient-text">Speed-Based Sizing</span></h2>
+          <p style="margin-bottom: 1.5rem;">Can we make the brush size dynamic depending on how fast the user moves the cursor?</p>
+          <ul>
+            <li>`pmouseX` & `pmouseY`: Built-in variables containing mouse coordinate positions from the *previous* frame.</li>
+            <li>`dist(x1, y1, x2, y2)`: Calculates distance between two coordinates.</li>
+            <li>This distance represents cursor velocity (speed)!</li>
+          </ul>
+        </div>
+        <div class="highlight-card" style="background: #0b0f19; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border: 1px solid var(--border-color);">
+          <h4 style="color: var(--accent-magenta); font-family: 'Fira Code', monospace; font-size: 0.95rem;">// Velocity Brush Sizing:</h4>
+          <pre style="font-size: 0.85rem;"><span class="keyword">function</span> <span class="fn">draw</span>() {
+  <span class="comment">// Calculate speed as spatial distance</span>
+  <span class="keyword">let</span> speed = <span class="fn">dist</span>(<span class="fn">pmouseX</span>, <span class="fn">pmouseY</span>, <span class="fn">mouseX</span>, <span class="fn">mouseY</span>);
+  
+  <span class="fn">fill</span>(<span class="number">0</span>, <span class="number">255</span>, <span class="number">200</span>, <span class="number">120</span>);
+  <span class="comment">// Size matches speed! Fast = Big, Slow = Small</span>
+  <span class="fn">ellipse</span>(<span class="fn">mouseX</span>, <span class="fn">mouseY</span>, speed, speed);
+}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 29: CHALLENGE LEVEL 3: BUBBLE CATCHER GAME -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Level 3: <span class="gradient-text">Bubble Catcher Game</span></h2>
+          <p style="margin-bottom: 1.5rem;">Ready for complete game mechanics? Let's analyze the Catch the Bubble game code (`demo3_game.js`).</p>
+          <ul>
+            <li>Uses speed values to make targets fall down.</li>
+            <li>Implements score counters.</li>
+            <li>Applies simple bounding boxes to detect catcher-bubble collisions.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card" style="border-left: 4px solid var(--accent-magenta);">
+            <h4 style="color: var(--accent-magenta); margin-bottom: 0.5rem;">Try modifying:</h4>
+            <p style="font-size: 0.95rem;">Change the falling speed, make the paddle wider/narrower, or alter the color styling variables in the template code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 30: CODE ANALYSIS: GAME COLLISIONS & COUNTERS -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Game <span class="gradient-text">Collision Logic</span></h2>
+          <p style="font-size: 1rem; margin-bottom: 1rem;">To catch the falling bubble, we use conditional ranges to verify coordinate overlaps:</p>
+          <pre style="font-size: 0.8rem; margin-bottom: 1rem;"><span class="keyword">if</span> (ballY + ballSize/<span class="number">2</span> >= catcherY && ballY - ballSize/<span class="number">2</span> <= catcherY + catcherH) {
+  <span class="keyword">if</span> (ballX >= catcherX - catcherW/<span class="number">2</span> && ballX <= catcherX + catcherW/<span class="number">2</span>) {
+    score = score + <span class="number">1</span>;
+    resetBall();
+  }
+}</pre>
+          <ul>
+            <li>Checks if the ball vertical bounding box crosses the paddle.</li>
+            <li>Checks if the ball horizontal alignment lies within the paddle width.</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="highlight-card">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">Physics Scaling Fix:</h4>
+            <p style="font-size: 0.9rem;">To make sure the ball speed scales with higher scores without breaking at negative values, we capped it with `Math.max(0, score)` in the reset script.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 31: CAREER PROSPECTS -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">Where Can <span class="gradient-text">BIT Take You?</span></h2>
+          <p style="margin-bottom: 1.5rem;">An IT degree from NMIT prepares you for specialized, high-growth roles in New Zealand:</p>
+          <div class="highlight-grid">
+            <div class="highlight-card">
+              <h4 style="color: var(--accent-cyan); margin-bottom: 0.25rem;">Software Developer</h4>
+              <p style="font-size: 0.85rem;">Build applications, games, databases, and digital platforms.</p>
+            </div>
+            <div class="highlight-card">
+              <h4 style="color: var(--accent-magenta); margin-bottom: 0.25rem;">Cyber Security Specialist</h4>
+              <p style="font-size: 0.85rem;">Perform ethical hacks and secure corporate assets and servers.</p>
+            </div>
+            <div class="highlight-card">
+              <h4 style="color: var(--secondary); margin-bottom: 0.25rem;">Network Engineer</h4>
+              <p style="font-size: 0.85rem;">Design the secure communication grid linking office networks.</p>
+            </div>
+            <div class="highlight-card">
+              <h4 style="color: var(--primary); margin-bottom: 0.25rem;">UX/UI Designer</h4>
+              <p style="font-size: 0.85rem;">Architect the layouts and responsive frames users click through.</p>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 0.5rem;">
+          <div class="big-stat">$70,000+</div>
+          <p style="font-weight: bold; color: var(--text-main); font-size: 0.95rem;">Typical NZ Starting Salary</p>
+          <p style="font-size: 0.85rem; max-width: 250px;">IT specialists remain one of the most in-demand professionals nationwide.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 32: STUDY STREAMS AT NMIT -->
+    <div class="slide">
+      <div class="card split-layout">
+        <div>
+          <h2 style="margin-bottom: 1rem;">NMIT BIT <span class="nmit-text">Major Tracks</span></h2>
+          <p style="margin-bottom: 1.5rem;">Choose your specialization in the Bachelor of IT to align with your career goals:</p>
+          <ul>
+            <li class="nmit-bullet"><strong>Software Development Major:</strong> Learn front-end, back-end APIs, cloud systems, and database engineering.</li>
+            <li class="nmit-bullet"><strong>Information Systems Major:</strong> Align business operations with database pipelines and analytical tools.</li>
+            <li class="nmit-bullet"><strong>Networking & Cybersecurity Major:</strong> Architect networks, manage servers, and build secure firewalls.</li>
           </ul>
         </div>
         <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
           <div class="highlight-card" style="text-align: center;">
             <p style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Study Structure</p>
             <h3 style="font-size: 1.8rem; margin: 0.5rem 0;" class="nmit-text">3 Years Full-Time</h3>
-            <p style="font-size: 0.95rem;">Or study part-time while working in tech.</p>
+            <p style="font-size: 0.95rem;">Flexible part-time study plans also available.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 11: GRAD CAREERS -->
+    <!-- SLIDE 33: Q&A & NEXT STEPS -->
     <div class="slide">
       <div class="card split-layout">
         <div>
-          <h2 style="margin-bottom: 1.25rem;">Where can the <span class="gradient-text">BIT take you?</span></h2>
-          <p style="margin-bottom: 1.5rem;">IT professionals are in high demand across New Zealand. Graduating opens paths to high-paying, creative careers:</p>
-          <div class="highlight-grid">
-            <div class="highlight-card">
-              <h4 style="color: var(--accent-cyan); margin-bottom: 0.25rem;">Software Developer</h4>
-              <p style="font-size: 0.85rem;">Build apps, mobile software, and game mechanics.</p>
-            </div>
-            <div class="highlight-card">
-              <h4 style="color: var(--accent-magenta); margin-bottom: 0.25rem;">Cyber Security Specialist</h4>
-              <p style="font-size: 0.85rem;">Audit systems, block hacks, secure local business data.</p>
-            </div>
-            <div class="highlight-card">
-              <h4 style="color: var(--secondary); margin-bottom: 0.25rem;">Network Engineer</h4>
-              <p style="font-size: 0.85rem;">Architect the infrastructure connecting companies and clouds.</p>
-            </div>
-            <div class="highlight-card">
-              <h4 style="color: var(--primary); margin-bottom: 0.25rem;">UX/UI Designer</h4>
-              <p style="font-size: 0.85rem;">Design the layouts and interfaces people love to use.</p>
-            </div>
-          </div>
-        </div>
-        <div style="display: flex; flex-direction: column; justify-content: center; gap: 1rem; align-items: center; text-align: center;">
-          <div class="big-stat">$70k+</div>
-          <p style="font-weight: bold; color: var(--text-main);">Typical NZ Graduate Starting Salary</p>
-          <p style="font-size: 0.9rem; max-width: 280px;">With senior roles easily scaling past $120k+.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 12: WRAP UP & QA -->
-    <div class="slide">
-      <div class="card split-layout">
-        <div>
-          <h2 style="margin-bottom: 1rem;">Take Your Next Step <span class="nmit-text">With NMIT</span></h2>
-          <p style="margin-bottom: 1.5rem;">Have questions about entry criteria, courses, or what it is like to study at the Nelson campus?</p>
+          <h2 style="margin-bottom: 1rem;">Start Your Journey <span class="nmit-text">With NMIT</span></h2>
+          <p style="margin-bottom: 1.5rem;">What questions do you have about today's taster session, coding, or paths to NMIT enrollment?</p>
           <ul>
-            <li class="nmit-bullet">Check out the official program at: <a href="https://www.nmit.ac.nz/study/programmes/bachelor-of-information-technology" target="_blank" style="color: var(--secondary); font-weight: bold; text-decoration: underline;">nmit.ac.nz/bit</a></li>
-            <li class="nmit-bullet">Talk to your school careers advisor about NMIT pathway days.</li>
-            <li class="nmit-bullet">Book a campus tour to see our computing labs and chat with tutors!</li>
+            <li class="nmit-bullet">Visit our program portal: <a href="https://www.nmit.ac.nz/study/programmes/bachelor-of-information-technology" target="_blank" style="color: var(--secondary); font-weight: bold; text-decoration: underline;">nmit.ac.nz/bit</a></li>
+            <li class="nmit-bullet">Talk to your high school careers advisor about visiting NMIT.</li>
+            <li class="nmit-bullet">Request a computing lab tour and meet our tutors face-to-face.</li>
           </ul>
           <a href="https://www.nmit.ac.nz/study/programmes/bachelor-of-information-technology" target="_blank" class="hero-btn" style="margin-top: 1rem; align-self: flex-start;">Explore NMIT BIT ➜</a>
         </div>
         <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem;">
           <div class="highlight-card" style="text-align: center; width: 100%; max-width: 300px; border: 2px solid rgba(16, 185, 129, 0.3);">
-            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary);">Questions & Answers</h3>
-            <p style="font-size: 0.95rem;">Ask us anything about studying IT, career paths, or p5.js coding!</p>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary);">Questions?</h3>
+            <p style="font-size: 0.95rem;">Ask away! We are happy to help demystify tech courses and career tracks.</p>
           </div>
-          <p style="font-size: 0.9rem; color: var(--text-muted);">Thank you for participating today!</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Thanks for coding with us today!</p>
         </div>
       </div>
     </div>
@@ -775,7 +1258,7 @@
   <!-- BOTTOM FOOTER -->
   <footer>
     <div class="slide-counter">
-      Slide <span id="current-slide-num">1</span> of <span id="total-slides-num">12</span>
+      Slide <span id="current-slide-num">1</span> of <span id="total-slides-num">33</span>
     </div>
     
     <div class="progress-track">
